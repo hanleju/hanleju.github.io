@@ -38,6 +38,13 @@
         <!-- .nav-item -->
       {% endfor %}
     </ul>
+
+    <div class="sidebar-heatmap">
+      <script src="{{ '/assets/js/heatmap.js' | relative_url }}"></script>
+      <h3 class="sidebar-heading">Posts Heatmap</h3>
+      <div id="posts-heatmap"></div>
+      <div id="posts-heatmap-legend"></div>
+    </div>
   </nav>
 
   <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">

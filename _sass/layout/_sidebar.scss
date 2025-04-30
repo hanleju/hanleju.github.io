@@ -256,3 +256,52 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     }
   }
 }
+
+/* Sidebar Heatmap 최적화 */
+.sidebar-heatmap {
+  padding: 1rem;
+  margin-top: 1rem;
+  box-sizing: border-box;
+
+  @include bp.xxxl {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .sidebar-heading {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 200;
+    color: var(--heatmap-heading-color);
+    text-align: center;
+  }
+
+  #posts-heatmap {
+    width: 100%;
+    min-height: 130px;
+    overflow: hidden;
+    display: flex; // 추가
+    justify-content: center; // 가로 중앙정렬 추가
+
+    @include bp.xxxl {
+      min-height: 150px;
+    }
+
+    svg {
+      width: auto; // width:auto로 수정하면 정확히 가운데 정렬
+      max-width: 100%; // SVG가 컨테이너를 넘지 않게 제한
+      height: auto;
+    }
+  }
+
+  #posts-heatmap svg text {
+    fill: var(--heatmap-label-color); // 기본값 #555
+    font-size: 10px; // 필요하면 글자 크기 조정 가능
+  }
+
+  #posts-heatmap-legend {
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+}

@@ -1,10 +1,139 @@
 ---
 ---
 
-@use 'main
-{%- if jekyll.environment == ' production ' -%}
+@use "main
+{%- if jekyll.environment == 'production' -%}
   .bundle
 {%- endif -%}
-';
+";
 
 /* append your custom style below */
+
+/* Definition, Theorem, Example Boxes */
+.definition-box,
+.theorem-box,
+.example-box {
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+  border-left: 4px solid;
+
+  font-size: 1.1rem;
+
+  line-height: 1.6; // line-height 약간 증가
+  background-color: var(--box-bg-color);
+  border-color: var(--box-border-color);
+  color: var(--text-color);
+
+  p {
+    margin: 0;
+  }
+
+  strong {
+    font-weight: 700; // bold 효과를 좀 더 강조
+    font-size: 1.2rem; // 굵게 강조된 부분의 폰트 사이즈 확대
+    font-style: normal;
+    color: var(--box-title-color); // 제목 텍스트 색상 명시적으로 지정
+  }
+}
+
+/* Box-specific styles */
+.definition-box {
+  --box-bg-color: var(--definition-bg);
+  --box-border-color: var(--definition-border);
+  --box-title-color: var(--definition-title-color);
+}
+
+.theorem-box {
+  --box-bg-color: var(--theorem-bg);
+  --box-border-color: var(--theorem-border);
+  --box-title-color: var(--theorem-title-color);
+}
+
+.example-box {
+  --box-bg-color: var(--example-bg);
+  --box-border-color: var(--example-border);
+  --box-title-color: var(--example-title-color);
+}
+
+.series-bookmark {
+  border-left: 4px solid var(--sidebar-active-color);
+  border-radius: 6px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  background-color: var(--card-bg);
+  box-shadow: var(--card-box-shadow);
+}
+
+.bookmark-header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.bookmark-header:hover {
+  opacity: 0.8;
+}
+
+.bookmark-list {
+  margin-top: 10px;
+  margin-left: 18px;
+  padding-left: 20px;
+  border-left: 2px solid var(--border-color);
+}
+
+.bookmark-list li {
+  margin-bottom: 6px;
+  font-weight: 100;
+  list-style-type: '🔗  ';
+}
+
+.bookmark-list a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 100;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.paper-info-box {
+  position: relative;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+  background-color: var(--paper-info-bg); /* 매우 연한 블루 */
+  border: 1px solid var(--paper-info-border); /* 선명한 블루 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.paper-info-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(
+    --paper-info-accent,
+    #3498db
+  ); /* 상단 액센트도 선명한 블루 */
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+/* 제목 부분 (필요 시) */
+.paper-info-box strong {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--paper-info-title-color); /* 조금 더 진한 블루 */
+}

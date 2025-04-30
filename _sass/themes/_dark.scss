@@ -4,7 +4,7 @@
   /* Framework color */
   --main-bg: rgb(27, 27, 30);
   --mask-bg: rgb(68, 69, 70);
-  --main-border-color: rgb(44, 45, 45);
+  --main-border-color: #ff8975;
 
   /* Common color */
   --text-color: rgb(175, 176, 177);
@@ -14,8 +14,8 @@
   --label-color: #a7a7a7;
   --blockquote-border-color: rgb(66, 66, 66);
   --blockquote-text-color: #868686;
-  --link-color: rgb(138, 180, 248);
-  --link-underline-color: rgb(82, 108, 150);
+  --link-color: #ff9e8d;
+  --link-underline-color: #b35c4a;
   --button-bg: #1e1e1e;
   --btn-border-color: #2e2f31;
   --btn-backtotop-color: var(--text-color);
@@ -32,16 +32,16 @@
   );
 
   /* Sidebar */
-  --site-title-color: #717070;
-  --site-subtitle-color: #868686;
-  --sidebar-bg: #1e1e1e;
-  --sidebar-border-color: #292929;
-  --sidebar-muted-color: #868686;
-  --sidebar-active-color: rgb(255, 255, 255, 0.95);
-  --sidebar-hover-bg: #262626;
-  --sidebar-btn-bg: #232328;
-  --sidebar-btn-color: #787878;
-  --avatar-border-color: rgb(206, 206, 206, 0.9);
+  --site-title-color: #a4a4a4;
+  --site-subtitle-color: #a4a4a4;
+  --sidebar-bg: linear-gradient(150deg, #ff8975 0%, #452f2b 20%, #1e1e1e 100%);
+  --sidebar-border-color: #3a2e2d;
+  --sidebar-muted-color: #a67f7a;
+  --sidebar-active-color: #ff8975;
+  --sidebar-hover-bg: rgba(255, 137, 117, 0.15);
+  --sidebar-btn-bg: #2c2423;
+  --sidebar-btn-color: #c79991;
+  --avatar-border-color: #ff8975;
 
   /* Topbar */
   --topbar-bg: rgb(27, 27, 30, 0.64);
@@ -66,7 +66,7 @@
   --btn-share-color: #6c757d;
   --btn-share-hover-color: #bfc1ca;
   --card-bg: #1e1e1e;
-  --card-hovor-bg: #464d51;
+  --card-hovor-bg: #925448;
   --card-shadow: rgb(21, 21, 21, 0.72) 0 6px 18px 0,
     rgb(137, 135, 135, 0.24) 0 0 0 1px;
   --kbd-wrap-color: #6a6a6a;
@@ -110,6 +110,29 @@
   --code-header-icon-color: #565656;
   --clipboard-checked-color: #2bcc2b;
   --filepath-text-color: #cacaca;
+
+  /* Heatmap */
+  --heatmap-heading-color: #a4a4a4;
+  --heatmap-cell-1: #3a2e2d;
+  --heatmap-cell-2: #7c4c45;
+  --heatmap-cell-3: #bd6b5d;
+  --heatmap-cell-4: #ff8975;
+  --heatmap-label-color: #868686;
+
+  /* 사용자 정의 박스 */
+  --definition-bg: #243747; // 더 밝게 수정하여 대비 향상
+  --definition-border: #4dabf7;
+  --definition-title-color: #a8d9ff; // 밝은 하늘색 계열로 제목 대비 강조
+  --theorem-bg: #203a31;
+  --theorem-border: #38d9a9;
+  --theorem-title-color: #8cf8d4;
+  --example-bg: #3e3724;
+  --example-border: #fab005;
+  --example-title-color: #ffdfa6;
+  --paper-info-bg: #1e2a38; /* 어두운 청색 계열의 배경 */
+  --paper-info-border: #3498db; /* 원래와 동일한 선명한 블루 (어둡고 깊은 배경 위에서 돋보임) */
+  --paper-info-accent: #3498db; /* 동일하게 유지 */
+  --paper-info-title-color: #85c1e9; /* 라이트 모드의 #2980b9보다 더 밝게 하여 어두운 배경에서 가독성 향상 */
 
   .light {
     display: none;
