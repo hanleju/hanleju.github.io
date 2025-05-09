@@ -20,11 +20,10 @@ comments: true
 render_with_liqueid: true
 ---
 
-> **Please Tell Me More: Privacy Impact of Explainability through the Lens of Membership Inference Attack** ([IEEE](https://ieeexplore.ieee.org/document/10646875))
-> Year : 2024
-> Authors : Han Liu et al.
+> **Please Tell Me More: Privacy Impact of Explainability through the Lens of Membership Inference Attack** ([IEEE](https://ieeexplore.ieee.org/document/10646875)) <br>
+> Year : 2024 <br>
+> Authors : Han Liu et al. <br>
 > Conference : IEEE Symposium on Security and Privacy
-> 
 {: .paper-info-box }
 
 ## Motivation

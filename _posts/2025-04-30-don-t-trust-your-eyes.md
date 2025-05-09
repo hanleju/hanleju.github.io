@@ -18,11 +18,10 @@ comments: true
 render_with_liqueid: true
 ---
 
-> **Don't trust your eyes: on the (un)reliability of feature visualizations** ([arXiv](https://arxiv.org/abs/2306.04719))
-> Year : 2023
-> Authors : Robert Geirhos et al.
-> Conference : ICML
-> 
+> **Don't trust your eyes: on the (un)reliability of feature visualizations** ([arXiv](https://arxiv.org/abs/2306.04719)) <br>
+> Year : 2023 <br> 
+> Authors : Robert Geirhos et al. <br>
+> Conference : ICML <br>
 {: .paper-info-box }
 
 ## Introduction
