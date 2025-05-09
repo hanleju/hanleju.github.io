@@ -24,7 +24,8 @@ render_with_liqueid: true
 > Year : 2024
 > Authors : Han Liu et al.
 > Conference : IEEE Symposium on Security and Privacy
-
+> 
+{: .paper-info-box }
 
 ## Motivation
 

@@ -22,7 +22,8 @@ render_with_liqueid: true
 > Year : 2023
 > Authors : Robert Geirhos et al.
 > Conference : ICML
-
+> 
+{: .paper-info-box }
 
 ## Introduction
 
