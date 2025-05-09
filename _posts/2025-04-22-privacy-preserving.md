@@ -26,6 +26,8 @@ render_with_liqueid: true
 > Conference : IEEE Symposium on Security and Privacy
 {: .paper-info-box }
 
+---
+
 ## Motivation
 
 Explainable Machine Learning(XML)은 인공지능 모델이 어떤 방식으로 판단을 내렸는지를 사용자에게 설명할 수 있도록 해주는 기술이다. 
@@ -36,10 +38,11 @@ Explainable Machine Learning(XML)은 인공지능 모델이 어떤 방식으로 
 2. 모델의 과적합 수준이나 설명 방식의 선택이 유출 위험도에 어떤 영향을 주는가?
 3. 공격자의 지식 수준(데이터 분포, 모델 구조 등)에 따라 유출 가능성은 어떻게 달라지는가? 특히 블랙박스 환경에서도 유출이 가능한가?
 
+---
 
 ## Proposed Method
 
-![Desktop View](../assets/img/post/pleasetellmemore/motivation.png)_Motivation._
+![Desktop View](../assets/img/post/0422/motivation.png)_Motivation._
 
 이 연구는 새로운 형태의 Membership Inference Attack(MIA)을 제안하며, 주요 아이디어는 설명 기법으로 생성된 **Attribution Map**을 기반으로 중요 픽셀을 선택하고, 이를 점진적으로 변형하며 **confidence drop trajectory**를 추적하는 것이다.
 
@@ -47,7 +50,7 @@ Explainable Machine Learning(XML)은 인공지능 모델이 어떤 방식으로 
 반면, non-member 데이터는 이러한 특징 학습이 덜 되어 있어 perturbation에 덜 민감하다. 
 이 차이를 활용해 공격 모델을 학습시킬 수 있다.
 
-![Desktop View](../assets/img/post/pleasetellmemore/overview.png)_Overview._
+![Desktop View](../assets/img/post/0422/overview.png)_Overview._
 
 전체 공격 파이프라인은 아래와 같이 네 단계로 구성된다.
 
@@ -134,6 +137,8 @@ $\mathcal{O}(c)$
 
 이러한 feature를 입력으로 받는 MLP(다층 퍼셉트론)를 학습시켜 membership을 예측한다.
 
+---
+
 ## Experiment
 
 ### Setup
@@ -152,14 +157,14 @@ $\mathcal{O}(c)$
 
 ### Results
 
-![Desktop View](../assets/img/post/pleasetellmemore/table2.png)
+![Desktop View](../assets/img/post/0422/table2.png)
 
 
 논문에서는 여러 baseline 방법과의 비교 결과를 정량적으로 제시하고 있다. 
 예를 들어, Grad-CAM을 사용했을 때 기존 MIA 방법들은 CIFAR-100 기준 TPR @ 0.1%가 0.5~0.6%에 그친 반면, 제안한 방법은 5.0%까지 달성한다. 
 더 나아가 loss trajectory까지 포함한 경우 성능은 15.8%로 10배 이상 향상된다.
 
-![Desktop View](../assets/img/post/pleasetellmemore/fig6.png)
+![Desktop View](../assets/img/post/0422/fig6.png)
 
 Figure 6은은 perturbation을 통해 confidence가 어떻게 변화하는지를 시각적으로 보여준다.
 CIFAR-10과 CIFAR-100 데이터셋을 대상으로, 각각의 샘플이 member일 때와 non-member일 때의 confidence score 및 confidence drop의 평균 경로를 시각화하였다.
@@ -170,7 +175,7 @@ CIFAR-10과 CIFAR-100 데이터셋을 대상으로, 각각의 샘플이 member�
 
 이러한 결과는 attribution 기반 perturbation이 기존 방법과 보완적인 공격 정보를 제공하며, 단순한 모델 confidence나 loss 기반 공격보다 더 정교한 멤버십 판별이 가능하다는 점을 보여준다.
 
-![Desktop View](../assets/img/post/pleasetellmemore/table45.png)
+![Desktop View](../assets/img/post/0422/table45.png)
 
 Table 4는 CIFAR-10과 CIFAR-100 데이터셋의 각 클래스별로 member와 non-member 간의 confidence 변화 패턴을 분석한 결과이다. 
 각 클래스에 대해 Grad-CAM 기반 MoRF perturbation을 적용하고, confidence score drop의 평균 trajectory를 시각화하여 클래스 별 멤버십 유출 민감도를 비교한다.
@@ -186,6 +191,8 @@ Table 5는 서로 다른 모델 구조(architecture) 및 설명 기법(explainer
 결과적으로, 모델의 아키텍처가 달라지면 동일한 설명 기법을 사용해도 privacy leakage 정도에 차이가 발생하는 것으로 나타났다.
 
 또한 Grad-CAM과 같이 시각적으로 강한 집중을 보여주는 explainer는 SHAP이나 LIME에 비해 멤버/비멤버 간 confidence drop의 차이가 더 극명하게 드러나는 경우가 많다. 이는 설명 기법의 특성 자체가 프라이버시 유출에 기여하는 요소임을 시사한다.
+
+---
 
 ## Conclusion
 
