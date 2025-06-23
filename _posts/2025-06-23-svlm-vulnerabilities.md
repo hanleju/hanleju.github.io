@@ -141,7 +141,7 @@ Text Encoder는 사진의 초록 박스 부분에 해당한다.
 
 VLM 모델에 대해 membership inference attack을 진행하기 위해 적용했을 때 Temperature 정보를 활용하여 공격을 진행한다.
 
-![Desktop View](../assets/img/post/0623/temperature_예시.png)_Temperature 예시 사진._
+![Desktop View](../assets/img/post/0623/bike.jpg)_Temperature 예시 사진._
 
 Temperature는 LLM의 텍스트 생성 과정에서 다음 단어를 샘플링할 때의 무작위성을 조절하는 파라미터를 말한다.
 낮은 temperature로 설정 시 정확하고 일관된 답변을 작성하여 출력이 된다.
@@ -168,5 +168,3 @@ VLM은 Vision + Language의 융합 모델로서 다양한 modality 간의 결합
 - SVLM에 특화된 privacy attack/defense 기법 연구
 - temperature, alignment consistency 등 multimodal 특징을 활용한 attack metric 제안
 - modality 간 정보 전파 경로에 대한 분석 및 방어 메커니즘 개발
-
-
